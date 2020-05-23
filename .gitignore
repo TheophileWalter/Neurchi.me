@@ -1,0 +1,16 @@
+#do not push settings files
+/configurations/ossn.config.db.php
+/configurations/ossn.config.site.php
+
+#do not include following files
+/cache
+/installation/INSTALLED
+Thumbs.db
+Desktop.ini
+DISPLAY_ERRORS
+error_log
+
+#do not ignore config files
+!/.scrutinizer.yml
+!/.travis.yml
+!.gitignore

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component xmlns="http://www.opensource-socialnetwork.org/v/3.0">
+    <name>RemoveBirthdate</name>
+    <id>RemoveBirthdate</id>
+    <author>Core Team</author>
+    <description>Remove birthdate from the website (this will remove birthdate from signup form, user edit, add form). This will surely effect the graphs in the administrator dashboard.</description>
+    <license>Open Source Social Network License (OSSN LICENSE)</license>
+    <author_url>https://www.opensource-socialnetwork.org/</author_url>
+    <license_url>https://www.opensource-socialnetwork.org/licence/</license_url>
+    <version>2.0</version>
+	<requires>
+		<type>ossn_version</type>
+		<version>5.0</version>
+	</requires>
+
+</component>

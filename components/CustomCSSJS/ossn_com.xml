@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component xmlns="http://www.opensource-socialnetwork.org/v/3.0">
+    <name>Homelancer Custom CSS/JS</name>
+    <id>CustomCSSJS</id>
+    <author>Geocadin RA</author>
+    <description>Homelancer Custom CSS/JS allows you to add custom CSS styles or JS scripts on a text box.</description>
+    <license>GNU General Public License, version 2</license>
+    <author_url>http://homelancer.com/</author_url>
+    <license_url>http://www.opensource-socialnetwork.org/licence/</license_url>
+    <version>1.1</version>
+	<requires>
+		<type>ossn_version</type>
+		<version>4.0</version>
+	</requires>
+</component>

@@ -1,0 +1,46 @@
+OSSN - OPEN SOURCE SOCIAL NETWORK V5.2 
+* Several fixes for handling of cover images #1488
+* Added general support for dragging images #1489
+* Add unique identifier for group cover repositioning #1490
+* Several fixes for group cover repositioning #1491
+* Add unique identifier for profile cover repositioning #1492
+* Several fixes for profile cover repositioning #1493
+* if not algo specified when user edit md5 is used #1503
+* Deleting user didn't delete users wall posts if wall poster_guid is not same user as deleted #1505
+* Don't lose searchstrings containing utf-8 chars #1496
+* Post on edit not returning JSON type callback #1506
+* ossn_string_encrypt_key_cycled should not generate more than 56 bytes #1508
+* Allow to use wheres clause in searchNotification #1510
+* Notification for tagging friend in wall isn't working #1511
+* added option to display explicit time to ossn_user_friendly_time #1517
+* Fixed the cirtical bug #1521 (discoverd by Tuomas Venhola in the infosec world, thanks to him!).
+* OSSN GROUPS Component: group cover image on mobiles/tablets is not responsive #1520
+* Make cover minimum width to container width #1523
+* Broken messages view layout #1518
+* OssnMessages->deleteUser() leaves orphan entity records #1516
+* Optimize Pre-loader https://www.opensource-socialnetwork.org/component/view/3657/optimize-pre-loader
+* UI improvements #1524
+* Add animation for uploading group/profile cover. #1527
+* Reactions has been added to posts and comments.
+* Uploading new group cover, it keeps the old cover file only. #1528
+* Notification sent to wrong User #1530 [Thanks to Johannes https://www.opensource-socialnetwork.org/u/Yasu79 for helping to debug the issue]
+* Added new hook 'notification:participants' #1531
+* Added 2 hooks to prevent creation of participants notification records #1532
+* Added 2 hooks to change a quality of image saved/created 'ossn', 'image:save:quality' and ossn', 'image:resize:quality'
+* Added style 'for newsfeed-middle-top' div #1535
+* Display right sidebar content above newsfeed on mobile devices #1534
+* Provide indentical style for all submenu items of left sidebar #1533
+* Added Greek language thanks to Rafail (https://www.opensource-socialnetwork.org/u/RafailStratiotis)
+* Added 'Close notification windows by clicking anywhere' strings #15xx
+* Added Esperanto language, thanks to Johannes Genberg (https://www.opensource-socialnetwork.org/u/Yasu79)
+* Decreased size of emojiis in selector box #1614
+* Added right extra margin to rightmost chat window #1615
+* Add a way of dynamic gender reporting in admin dashboard thanks to Shylo Hana for providing enhancement (https://www.opensource-socialnetwork.org/u/shylo)
+* Make saved drag position available for scaling calculation #1617
+* Improved scaling of group / profile cover images on mobile devices #1619
+* Don't display cover images before scale/dragposition is known #1618
+* Force newly uploaded cover images to 'display:inline' #1621
+* Use same cover uploading animation as with profile cover #1622
+* Fix double-backslash display error after editing #1627
+
+ - Special Thanks to Z-Man for v5.2 release as he fixed 90% of issues!

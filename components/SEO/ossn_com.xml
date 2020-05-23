@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component xmlns="http://www.opensource-socialnetwork.org/v/3.0">
+    <name>SEO</name>
+    <id>SEO</id>
+    <author>Daniel Teich</author>
+    <description>SEO Settings - META / Twitter / Open Graph / Facebook</description>
+    <license>GNU General Public License, version 2</license>
+    <author_url>http://www.danielteich.de/</author_url>
+    <license_url>http://www.opensource-socialnetwork.org/licence/</license_url>
+    <version>1.1</version>
+	<requires>
+		<type>ossn_version</type>
+		<version>5.0</version>
+	</requires>
+</component>

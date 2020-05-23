@@ -1,0 +1,4 @@
+This component is making use of a third-party library named imagesLoaded by David DeSandro.
+
+Sources: https://github.com/desandro/imagesloaded
+License: https://desandro.mit-license.org/
