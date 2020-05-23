@@ -17,7 +17,7 @@
 				<?php } ?>
 			</div>
 			<div class="col-md-7 site-name text-center <?php echo $hide_loggedin;?>">
-				<span><a href="<?php echo ossn_site_url();?>"><?php echo ossn_site_settings('site_name');?></a></span>
+				<span><a href="<?php echo ossn_site_url();?>" style="padding:0;"><img src="/themes/goblue/images/logo.png" style="height:2.3em;" alt="<?php echo ossn_site_settings('site_name');?>" /></a></span>
 			</div>
 			<div class="col-md-3 text-right right-side">
 				<div class="topbar-menu-right">

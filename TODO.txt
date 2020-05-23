@@ -1,0 +1,5 @@
+[ ] Actualités des groupes sur la page d'accueil
+[ ] Modérateurs pour les groupes
+[ ] Filtre pour les groupes
+[X] Cliquer sur les images pour les voir en taille réel
+[ ] Album des photos d'un groupe (s'inspirer de celui de l'utilisateur)

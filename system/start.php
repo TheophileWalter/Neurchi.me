@@ -13,6 +13,13 @@ if(!defined("OSSN_ALLOW_SYSTEM_START")){
 	header("HTTP/1.0 404 Not Found");	
 	exit;
 }
+// Make sessions longer than default
+session_name('neurchi_de_token');
+ini_set('session.cookie_lifetime', 60 * 60 * 24 * 30);  
+ini_set('session.cookie_secure', '1');
+ini_set('session.cookie_httponly', '1');
+ini_set('session.use_only_cookies', '1');
+ini_set('session.hash_function', 'sha256');
 global $Ossn;
 if (!isset($Ossn)) {
     $Ossn = new stdClass;

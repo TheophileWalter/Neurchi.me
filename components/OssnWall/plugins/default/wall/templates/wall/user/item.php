@@ -81,7 +81,7 @@ if ($params['user']->guid !== $params['post']->owner_guid) {
             <?php
             if (!empty($image)) {
                 ?>
-                <img src="<?php echo ossn_site_url("post/photo/{$params['post']->guid}/{$image}"); ?>"/>
+                <a href="<?php echo ossn_site_url("post/photo/{$params['post']->guid}/{$image}"); ?>" target="_blank"><img src="<?php echo ossn_site_url("post/photo/{$params['post']->guid}/{$image}"); ?>"/></a>
 
             <?php } ?>          
 		</div>

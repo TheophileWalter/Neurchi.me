@@ -99,13 +99,53 @@ p {
 }
 
 .btn-primary {
-	background-color: #2a87a7;
+	background-color: #df973a;
+	border-color: #a5702b;
+}
+
+.btn-primary.active,
+.btn-primary.focus,
+.btn-primary:active,
+.btn-primary:focus,
+.btn-primary:hover,
+.open>.dropdown-toggle.btn-primary {
+	color:#fff;
+	background-color:#bd8132;
+	border-color:#7c5420
 }
 
 a {
-	color: #0f3b4a;
+	color: #855115;
 }
 
+a:hover, a:visited, a:active {
+	color: #703e08;
+}
+
+.post-control-comment::before, .post-control-like::before, .comment-post::before, .entity-menu-extra-comment::before, .like-post::before, .entity-menu-extra-like::before {
+	font: normal normal normal 14px/1 FontAwesome;
+	font-size: 14px;
+	font-size: inherit;
+	text-rendering: auto;
+	margin-right: 0.5em;
+	display:inline-block; /* Removes the text-decoration */
+}
+
+.post-control-comment::before, .comment-post::before, .entity-menu-extra-like::before {
+	content: '\f075';
+}
+
+.post-control-like::before, .like-post::before, .entity-menu-extra-like::before {
+	content: '\f004';
+}
+
+.post-control-comment, .comment-post, .entity-menu-extra-like, .post-control-like, .like-post, .entity-menu-extra-like {
+	color: #855115!important;
+}
+
+.fa-sort-desc {
+	color: #4A320F!important;
+}
 
 /************************************
 	Layouts
@@ -123,8 +163,10 @@ a {
 }
 
 .ossn-home-container,
-.ossn-layout-startup {
-	min-height: 560px;
+.ossn-layout-startup {}
+
+.ossn-layout-startup .container {
+	min-height: calc(100vh - 48px);
 }
 
 .ossn-home-container .ossn-page-contents {
@@ -133,7 +175,6 @@ a {
 }
 
 .ossn-layout-startup {
-	min-height: 560px;
 	background: url("<?php echo ossn_add_cache_to_url(ossn_theme_url('images/background.jpg'));?>") no-repeat;
 	background-size: cover;
 }
@@ -266,7 +307,7 @@ a {
 ********************************/
 
 .topbar {
-	background: #0b769c;
+	background: #F39C12;
 	color: #fff;
 	z-index: 1;
 	position: relative;
@@ -311,7 +352,7 @@ a {
 .topbar-menu-right li:hover,
 .topbar-menu-left li:hover {
 	cursor: pointer;
-	background-color: #0a6586;
+	background-color: #bd800f;
 }
 
 .topbar .right-side-nospace .topbar-menu-right {
@@ -333,7 +374,7 @@ a {
 .topbar .ossn-icons-topbar-friends,
 .topbar .ossn-icons-topbar-messages,
 .topbar .ossn-icons-topbar-notification i {
-	color: #0f3b4a;
+	color: #4a320f;
 }
 
 .topbar .ossn-icons-topbar-friends-new,
@@ -1232,7 +1273,7 @@ a {
 }
 
 .notification-friends .notfi-meta a {
-	color: #337ab7;
+	color: #b77e33;
 	font-weight: bold;
 	display: inline-block;
 	width: 200px;
@@ -1610,7 +1651,7 @@ ul.token-input-list {
 	background-color: #fff;
 	list-style-type: none;
 	clear: left;
-	color: #2B5470;
+	color: rgb(112, 84, 43);
 	border-top: 1px dashed #EEE;
 	border-right: 1px solid #EEE;
 	border-left: 1px solid #EEE;
@@ -1623,7 +1664,7 @@ li.token-input-token {
 	margin: 3px;
 	padding: 1px 3px;
 	background-color: #eff2f7;
-	color: #2B5470;
+	color: rgb(112, 90, 43);
 	cursor: default;
 	font-weight: bold;
 	border: 1px solid #ccd5e4;
@@ -1652,7 +1693,7 @@ li.token-input-token span {
 li.token-input-selected-token {
 	background-color: #F9F9F9;
 	border: 1px solid #eee;
-	color: #2B5470;
+	color: rgb(112, 84, 43);
 	font-weight: bold;
 }
 
@@ -1709,7 +1750,7 @@ div.token-input-dropdown ul li em {
 
 div.token-input-dropdown ul li.token-input-selected-dropdown-item {
 	background-color: #F9F9F9;
-	color: #2B5470;
+	color: rgb(112, 84, 43);
 	font-weight: bold;
 }
 
@@ -1734,7 +1775,7 @@ div.token-input-dropdown ul li.token-input-selected-dropdown-item {
 /** v1-v3 compitible **/
 
 .ossn-message-done {
-	border: 1px solid #1EB0DF;
+	border: 1px solid rgb(223, 156, 30);
 	border-width: 1px;
 	background-color: #DAF6FF;
 	padding: 13px;
@@ -1973,7 +2014,7 @@ div.token-input-dropdown ul li.token-input-selected-dropdown-item {
 	-moz-animation: three-quarters-loader 1250ms infinite linear;
 	-webkit-animation: three-quarters-loader 1250ms infinite linear;
 	animation: three-quarters-loader 1250ms infinite linear;
-	border: 8px solid #38e;
+	border: 8px solid rgb(238, 157, 51);
 	border-right-color: transparent;
 	border-radius: 16px;
 	box-sizing: border-box;

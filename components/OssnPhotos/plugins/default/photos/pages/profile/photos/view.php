@@ -17,8 +17,9 @@ $img = str_replace('profile/photo/', '', $image->value);
     <table border="0" class="ossn-photo-viewer">
         <tr>
             <td class="image-block">
-                <img
-                    src="<?php echo ossn_site_url("album/getphoto/") . $image->owner_guid; ?>/<?php echo $img; ?>?type=1"/>
+                <a href="<?php echo ossn_site_url("album/getphoto/") . $image->owner_guid; ?>/<?php echo $img; ?>?type=1" target="_blank">
+                    <img src="<?php echo ossn_site_url("album/getphoto/") . $image->owner_guid; ?>/<?php echo $img; ?>?type=1"/>
+                </a>
             </td>
         </tr>
     </table>

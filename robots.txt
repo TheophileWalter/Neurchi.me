@@ -1,4 +1,6 @@
 User-agent: *
+Disallow: /site/terms
+Disallow: /site/privacy
 Disallow: /cache/
 Disallow: /actions/
 Disallow: /classes/
@@ -7,6 +9,5 @@ Disallow: /installation/
 Disallow: /locale/
 Disallow: /system/
 Disallow: /vendors/
-Disallow: /themes/
 Disallow: /upgrade/
 
