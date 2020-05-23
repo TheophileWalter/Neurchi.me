@@ -38,11 +38,11 @@ if($loggedinuser->canModerate()) {
 // wall mode: friends-only posts	
 } elseif($accesstype == 'friends') {
 	$posts = $wall->getFriendsPosts(array(
-				'type' => 'user',
+				'type' => array('user', 'group'),
 				'distinct' => true,
 	));
 	$count = $wall->getFriendsPosts(array(
-			'type' => 'user',
+			'type' => array('user', 'group'),
 			'count' => true,
 			'distinct' => true,
 	));

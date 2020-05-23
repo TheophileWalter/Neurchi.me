@@ -264,9 +264,21 @@ class OssnWall extends OssnObject {
 							}
 						}						
 						$friend_guids   = implode(',', $friend_guids);
+
+						// Append groups id to guids list
+						// (to get group posts in newsfeed)
+						$groups = new OssnGroup;
+						$groups_list = $groups->getMyGroups($user);
+						$group_guids = array();
+						if ($groups_list !== false) {
+							foreach ($groups_list as $group) {
+								$group_guids[] = $group->guid;
+							}
+						}
+						$group_guids   = implode(',', $group_guids);
 						
 						$default = array(
-								'type' => 'user',
+								'type' => array('user', 'group'),
 								'subtype' => 'wall',
 								'order_by' => 'o.guid DESC',
 								'entities_pairs' => array(
@@ -278,7 +290,7 @@ class OssnWall extends OssnObject {
 												array(
 												  	'name' => 'poster_guid',
 													'value' => true,
-													'wheres' => "((emd0.value=2 OR emd0.value=3) AND [this].value IN({$friend_guids}))"
+													'wheres' => "(((emd0.value=2 OR emd0.value=3) AND [this].value IN({$friend_guids})) OR (o.type = 'group' AND o.owner_guid IN({$group_guids})))"
  											  )
 								)
 						);

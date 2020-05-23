@@ -1,4 +1,4 @@
-[ ] Actualités des groupes sur la page d'accueil
+[X] Actualités des groupes sur la page d'accueil
 [ ] Modérateurs pour les groupes
 [ ] Filtre pour les groupes
 [X] Cliquer sur les images pour les voir en taille réel
