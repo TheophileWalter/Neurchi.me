@@ -69,8 +69,18 @@ $fr = array(
 	'group:delete:cover:success' => "L'image de couverture a été supprimée avec succès",
 	
 	//need translation
-    'group:memb:make:owner' => 'Make group owner',
-    'group:memb:make:owner:confirm' => 'Attention! This action will make >> %s << the new owner of the group and you will lose all of your group admin privileges. Are you sure to proceed?',
-    'group:memb:make:owner:admin:confirm' => 'Attention! This action will make >> %s << the new owner of the group and the former owner will lose all of his group admin privileges. Are you sure to proceed?',	
+    'group:memb:make:owner' => 'Nommer propriétaire',
+    'group:memb:make:owner:confirm' => 'Attention ! Cette action fera de >> %s << le nouveau propriétaire du groupe et vous perdrez tous vos privilèges sur ce groupe. Êtes-vous certain de vouloir continuer ?',
+    'group:memb:make:owner:admin:confirm' => 'Attention ! Cette action fera de >> %s << le nouveau propriétaire du groupe et le propriétaire actuel predra tous ses privilèges. Êtes-vous certain de vouloir continuer ?',	
+
+    'pendings' => 'En attente',
+    'no:pendings' => 'Aucune publication en attente',
+    'pending:accept' => 'Accepter',
+    'pending:refuse' => 'Supprimer',
+    'pending:accept:error' => 'Impossible d\'accepter la publication, veuillez réessayer plus tard.',
+    'pending:accepted' => 'Publication acceptée',
+    'pending:refuse:error' => 'Impossible de refuser la publication, veuillez réessayer plus tard.',
+    'pending:refuse:success' => 'La publication a été refusée.',
+
 );
 ossn_register_languages('fr', $fr); 

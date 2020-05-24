@@ -69,7 +69,7 @@ if(!$params['user']){
             <?php } ?>
          
 		</div>
-        <?php if($params['ismember'] === 1){  ?>
+        <?php if($params['ismember'] === 1 && !isset($params['post']->pending)){  ?>
 		<div class="comments-likes">
 			<div class="menu-likes-comments-share">
 				<?php echo ossn_view_menu('postextra', 'wall/menus/postextra');?>

@@ -368,6 +368,54 @@ class OssnGroup extends OssnObject {
 		}
 		
 		/**
+		 * Accept post publication
+		 *
+		 * @params $post Post guid
+		 *         $group Group guid
+		 *
+		 * @return bool;
+		 */
+		public function acceptPost($post, $group) {
+			self::initAttributes();
+			if ($this->pendingPostExists($post, $group)) {
+				$params = array(
+					'names' => array('type'),
+					'values' => array('group'),
+					'table' => 'ossn_object',
+					'wheres' => array(
+						"guid = '{$post}'AND owner_guid = '{$group}' AND type = 'group:pending'"
+					)
+				);
+				return $this->OssnDatabase->update($params);
+			}
+			return false;
+		}
+		/**
+		 * Check if pending post exists
+		 *
+		 * @params $post Post guid
+		 *         $group Group guid
+		 *
+		 * @return bool;
+		 */
+		public function pendingPostExists($post, $group) {
+				if(isset($this->guid)) {
+						$group = $this->guid;
+				}
+				$this->statement("SELECT * FROM ossn_object WHERE(
+					     guid='{$post}' AND
+						 owner_guid='{$group}' AND
+					     type='group:pending'
+					     );");
+				$this->execute();
+				$request = $this->fetch();
+				if(!empty($request->guid)) {
+						return true;
+				}
+				return false;
+		}
+		
+		/**
 		 * Delete member from group
 		 *
 		 * @params $from Member guid

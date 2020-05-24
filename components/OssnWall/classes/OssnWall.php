@@ -276,6 +276,11 @@ class OssnWall extends OssnObject {
 							}
 						}
 						$group_guids   = implode(',', $group_guids);
+						if ($group_guids != '') {
+							$groups_request = "OR (o.type = 'group' AND o.owner_guid IN({$group_guids}))";
+						} else {
+							$groups_request = '';
+						}
 						
 						$default = array(
 								'type' => array('user', 'group'),
@@ -290,7 +295,7 @@ class OssnWall extends OssnObject {
 												array(
 												  	'name' => 'poster_guid',
 													'value' => true,
-													'wheres' => "(((emd0.value=2 OR emd0.value=3) AND [this].value IN({$friend_guids})) OR (o.type = 'group' AND o.owner_guid IN({$group_guids})))"
+													'wheres' => "(((emd0.value=2 OR emd0.value=3) AND [this].value IN({$friend_guids})) $groups_request)"
  											  )
 								)
 						);

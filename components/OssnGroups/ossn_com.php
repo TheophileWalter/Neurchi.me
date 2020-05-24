@@ -34,12 +34,14 @@ function ossn_groups() {
 		ossn_group_subpage('members');
 		ossn_group_subpage('edit');
 		ossn_group_subpage('requests');
+		ossn_group_subpage('pendings');
 		
 		//group hooks
 		ossn_add_hook('group', 'subpage', 'group_about_page');
 		ossn_add_hook('group', 'subpage', 'group_members_page');
 		ossn_add_hook('group', 'subpage', 'group_edit_page');
 		ossn_add_hook('group', 'subpage', 'group_requests_page');
+		ossn_add_hook('group', 'subpage', 'group_pendings_page');
 		ossn_add_hook('newsfeed', "left", 'ossn_add_groups_to_newfeed');
 		ossn_add_hook('search', 'type:groups', 'groups_search_handler');
 		ossn_add_hook('notification:add', 'comments:post:group:wall', 'ossn_notificaiton_groups_comments_hook');
@@ -56,6 +58,8 @@ function ossn_groups() {
 				ossn_register_action('group/member/approve', __OSSN_GROUPS__ . 'actions/group/member/request/approve.php');
 				ossn_register_action('group/member/cancel', __OSSN_GROUPS__ . 'actions/group/member/request/cancel.php');
 				ossn_register_action('group/member/decline', __OSSN_GROUPS__ . 'actions/group/member/request/decline.php');
+				ossn_register_action('group/pending/accept', __OSSN_GROUPS__ . 'actions/group/pending/request/accept.php');
+				ossn_register_action('group/pending/refuse', __OSSN_GROUPS__ . 'actions/group/pending/request/refuse.php');
 				
 				ossn_register_action('group/cover/upload', __OSSN_GROUPS__ . 'actions/group/cover/upload.php');
 				ossn_register_action('group/cover/reposition', __OSSN_GROUPS__ . 'actions/group/cover/reposition.php');
@@ -368,6 +372,38 @@ function group_requests_page($hook, $type, $return, $params) {
 				echo ossn_set_page_layout('module', $mod);
 		}
 }
+
+/**
+ * Group pending publications page
+ *
+ * Page:
+ *      group/<guid>/pendings
+ *
+ * @return mixdata;
+ * @access private
+ */
+function group_pendings_page($hook, $type, $return, $params) {
+	$page  = $params['subpage'];
+	$group = ossn_get_group_by_guid(ossn_get_page_owner_guid());
+	if($page == 'pendings') {
+			$user = ossn_loggedin_user()->guid;
+			$display_all = true; // Should we display all pending requests and accept/refuse controls in page
+			if($group->owner_guid !== $user && !ossn_isAdminLoggedin()) {
+					$display_all = false;
+			}
+			$mod_content = ossn_plugin_view('groups/pages/pendings', array(
+					'group' => $group,
+					'user' => $user,
+					'display_all' => $display_all
+			));
+			$mod = array(
+					'title' => ossn_print('pendings'),
+					'content' => $mod_content
+			);
+			echo ossn_set_page_layout('module', $mod);
+	}
+}
+
 /**
  * Group delete callback
  *
