@@ -54,7 +54,7 @@ if ($friends) {
     </a></li>
    <?php } ?> 
 <li id="ossn-notif-notification">
-    <a href="javascript:void(0);" onClick="Ossn.NotificationShow(this)" class="ossn-notifications-notification" onClick="Ossn.NotificationShow(this)"role="button" data-toggle="dropdown"> 
+    <a href="javascript:void(0);" onClick="Ossn.NotificationShow(this)" class="ossn-notifications-notification" role="button" data-toggle="dropdown"> 
                        <span>
                        <?php if ($count_notif > 0) { ?>
                            <span class="ossn-notification-container"><?php echo $count_notif; ?></span>

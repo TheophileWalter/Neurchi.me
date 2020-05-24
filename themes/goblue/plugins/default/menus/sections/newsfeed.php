@@ -33,7 +33,7 @@ foreach ($menus as $name => $menu) {
      <li data-toggle="collapse" data-target="#<?php echo $hash;?>" class="<?php echo $section;?>collapsed active <?php echo $expend;?>">
         	<a class="<?php $item;?>" href="javascript:void(0);"><i class="fa <?php echo $icon;?> fa-lg"></i><?php echo ossn_print($name);?><span class="arrow"></span></a>
      </li>
-    <ul class="sub-menu collapse <?php echo $expend;?>" id="<?php echo $hash;?>" class="<?php echo $items;?>"> 
+    <ul class="sub-menu collapse <?php echo $expend;?> <?php echo $items;?>" id="<?php echo $hash;?>"> 
     <?php
 	if(is_array($menu)){
 	    foreach ($menu as $data) {
