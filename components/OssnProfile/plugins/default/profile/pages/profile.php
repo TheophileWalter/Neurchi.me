@@ -76,23 +76,23 @@ if (ossn_isLoggedIn()) {
 						<?php if (ossn_isLoggedIn()) { if (ossn_loggedin_user()->guid == $user->guid) { ?>
 						<a href="<?php echo $user->profileURL('/edit'); ?>" class='btn-action'>
 							<?php echo ossn_print( 'update:info'); ?>
-						</a>
+						</a>&nbsp;
 						<?php } ?>
 						<?php if (ossn_loggedin_user()->guid !== $user->guid) { if (!ossn_user_is_friend(ossn_loggedin_user()->guid, $user->guid)) { if (ossn_user()->requestExists(ossn_loggedin_user()->guid, $user->guid)) { ?>
 						<a href="<?php echo ossn_site_url("action/friend/remove?cancel=true&user={$user->guid}", true); ?>" class='btn-action'>
                                 <?php echo ossn_print('cancel:request'); ?>
-                            </a>
+                            </a>&nbsp;
 						<?php } else { ?>
 						<a href="<?php echo ossn_site_url("action/friend/add?user={$user->guid}", true); ?>" class='btn-action'>
                                 <?php echo ossn_print('add:friend'); ?>
-                         </a>
+                         </a>&nbsp;
 						<?php } } else { ?>
 						<a href="<?php echo ossn_site_url("action/friend/remove?user={$user->guid}", true); ?>"  class='btn-action'>
                             <?php echo ossn_print('remove:friend'); ?>
-                        </a>
+                        </a>&nbsp;
 						<?php } ?>
 					  	<a href="<?php echo ossn_site_url("messages/message/{$user->username}"); ?>" id="profile-message" data-guid='<?php echo $user->guid; ?>' class='btn-action'>
-                        <?php echo ossn_print('message'); ?></a>
+                        <?php echo ossn_print('message'); ?></a>&nbsp;
 						<div class="ossn-profile-extra-menu dropdown">
 							<?php echo ossn_view_menu( 'profile_extramenu', 'profile/menus/extra'); ?>
 						</div>
@@ -101,7 +101,7 @@ if (ossn_isLoggedIn()) {
 					<div id="cover-menu" class="profile-menu">
 						<a href="javascript:void(0);" onclick="Ossn.repositionCOVER();" class='btn-action'>
 							<?php echo ossn_print('save:position'); ?>
-						</a>
+						</a>&nbsp;
 					</div>
 				</div>
 

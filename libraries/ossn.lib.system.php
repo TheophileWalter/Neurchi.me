@@ -63,7 +63,7 @@ function ossn_site_url($extend = '', $action = false) {
 	if ($action === true) {
 		$siteurl = ossn_add_tokens_to_url($siteurl);
 	}
-	return $siteurl;
+	return htmlspecialchars($siteurl);
 }
 
 /**
