@@ -3,3 +3,6 @@
 [ ] Filtre pour les groupes
 [X] Cliquer sur les images pour les voir en taille réel
 [ ] Album des photos d'un groupe (s'inspirer de celui de l'utilisateur)
+[ ] Corriger l'affichage des bannières sur mobile
+[X] Changer l'icone de groupe par défaut
+[X] Afficher les publicités sur mobile

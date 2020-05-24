@@ -2317,6 +2317,16 @@ footer .ossn-footer-menu a:last-child::after {
 		overflow: hidden;
 		text-overflow: ellipsis;
 	}
+	.owner-link {
+		white-space: normal;
+	}
+	/* Display only first ad */
+	.ossn-ad-item {
+		display: none;
+	}
+	.ossn-ad-item:first-of-type {
+		display: block!important;
+	}
 	.ossn-list-users .uinfo .userlink {
 		text-overflow: ellipsis;
 		width: 195px;
@@ -2517,7 +2527,7 @@ footer .ossn-footer-menu a:last-child::after {
      	Layouts
      ****************************/
 	.newsfeed-right {
-		display: none;
+		display: block;
 	}
 	.newsfeed-middle-top {
 		display: block;
@@ -2577,7 +2587,14 @@ footer .ossn-footer-menu a:last-child::after {
      	Layouts
      ****************************/
 	.newsfeed-right {
+		display: block;
+	}
+	/* Display only first ad */
+	.ossn-ad-item {
 		display: none;
+	}
+	.ossn-ad-item:first-of-type {
+		display: block!important;
 	}
 	.newsfeed-middle-top {
 		display: block;

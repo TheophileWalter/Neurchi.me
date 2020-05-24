@@ -71,7 +71,8 @@ class OssnAds extends OssnObject {
 						'owner_guid' => 1,
 						'type' => 'site',
 						'subtype' => 'ossnads',
-						'order_by' => 'rand()'
+						'order_by' => 'rand()',
+						'limit' => 2
 				);
 				if(!$random){
 						unset($options['order_by']);			

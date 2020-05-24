@@ -26,7 +26,16 @@ if(ossn_is_hook('newsfeed', "center:top")) {
 	<div class="row">
        	<?php echo ossn_plugin_view('theme/page/elements/system_messages'); ?>    
 		<div class="ossn-layout-newsfeed">
-			<div class="col-md-7">
+			<div class="col-md-4 col-md-push-7">
+            			<?php if(!empty($isempty)){ ?>
+				<div class="newsfeed-right">
+					<?php
+						echo $sidebar;
+						?>                            
+				</div>
+                		<?php } ?>
+			</div>
+			<div class="col-md-7 col-md-pull-4">
 				<?php if(!empty($isempty_top)){ ?>
 				<div class="newsfeed-middle-top">
 					<?php echo $newsfeed_center_top; ?>
@@ -35,15 +44,6 @@ if(ossn_is_hook('newsfeed', "center:top")) {
 				<div class="newsfeed-middle">
 					<?php echo $params['content']; ?>
 				</div>
-			</div>
-			<div class="col-md-4">
-            			<?php if(!empty($isempty)){ ?>
-				<div class="newsfeed-right">
-					<?php
-						echo $sidebar;
-						?>                            
-				</div>
-                		<?php } ?>
 			</div>
 		</div>
 	</div>
