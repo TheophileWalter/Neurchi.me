@@ -2543,7 +2543,7 @@ footer .ossn-footer-menu a:last-child::after {
      	Home Page
      **************************/
 	.logo img {
-		width: 260px;
+		display: none;
 	}
 	.home-left-contents .description {
 		font-size: 16px;
@@ -2612,6 +2612,12 @@ footer .ossn-footer-menu a:last-child::after {
 	.sidebar-menu-nav .sidebar-menu .menu-content {
 		display: block;
 	}
+	/*************************
+     	Home Page
+     **************************/
+	.logo img {
+		display: none;
+	}
 }
 
 @media only screen and (max-width: 1199px) {
@@ -2651,6 +2657,12 @@ footer .ossn-footer-menu a:last-child::after {
 	}
 	.ossn-search-page .ossn-users-list-item .uinfo {
 		margin-left: 0;
+	}
+	/*************************
+     	Home Page
+     **************************/
+	.logo img {
+		display: none;
 	}
 }
 
