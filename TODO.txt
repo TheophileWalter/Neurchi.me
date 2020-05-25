@@ -12,3 +12,4 @@
 [ ] Corriger l'affichage de la zone de création de post dans une page de groupe sur mobile
 [X] Changer l'icone de groupe par défaut
 [X] Afficher les publicités sur mobile
+[ ] Mettre un sujet en annonce dans un groupe

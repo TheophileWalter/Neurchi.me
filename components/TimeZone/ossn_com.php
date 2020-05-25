@@ -43,7 +43,7 @@ function time_zone_only_loggedin($hook, $type, $fields){
 			$placeholder = '';
 		}
 		$zonel = timezone_identifiers_list();
-		$zones = array_combine($zonel, $zonel);
+		$zones = array_merge(array('Europe/Paris' => 'Europe/Paris'), array_combine($zonel, $zonel));
 		$extrafield = 	array(
 			'class' => 'timezone-dropdown',
 			'name' => 'timezone',
