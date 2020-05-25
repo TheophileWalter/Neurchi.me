@@ -27,6 +27,7 @@ class OssnGroup extends OssnObject {
 		 *         $params['description'] Group description
 		 *         $params['owner_guid']: Guid of owner creating group
 		 *         $params['privacy'] Group Privacy
+		 *         $params['validation] Is publication validation enabled
 		 *
 		 * @return bool;
 		 */
@@ -42,6 +43,9 @@ class OssnGroup extends OssnObject {
 				$this->subtype    = 'ossngroup';
 				if($params['privacy'] == OSSN_PRIVATE || $params['privacy'] == OSSN_PUBLIC) {
 						$this->data->membership = $params['privacy'];
+				}
+				if($params['validation'] == '0' || $params['validation'] == '1') {
+						$this->data->validation = $params['validation'];
 				}
 				if($this->addObject()) {
 						ossn_add_relation($params['owner_guid'], $this->getGuid(), 'group:join');

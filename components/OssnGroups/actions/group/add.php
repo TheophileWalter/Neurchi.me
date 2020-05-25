@@ -13,6 +13,7 @@ $params['owner_guid'] = ossn_loggedin_user()->guid;
 $params['name'] = input('groupname');
 $params['description'] = input('description');
 $params['privacy'] = input('privacy');
+$params['validation'] = input('validation');
 if ($add->createGroup($params)) {
     ossn_trigger_message(ossn_print('group:added'), 'success');
     redirect("group/{$add->getGuid()}");

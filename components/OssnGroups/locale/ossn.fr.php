@@ -81,6 +81,9 @@ $fr = array(
     'pending:accepted' => 'Publication acceptée',
     'pending:refuse:error' => 'Impossible de refuser la publication, veuillez réessayer plus tard.',
     'pending:refuse:success' => 'La publication a été refusée.',
+    'group:post_validation' => 'Validation des publications',
+    'pending:link' => 'EN ATTENTE (%s)',
+    'pending:post:created' => 'Sujet créé ! Il est en attente de validation.',
 
 );
 ossn_register_languages('fr', $fr); 

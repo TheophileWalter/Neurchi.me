@@ -9,14 +9,16 @@
  * @link      https://www.opensource-socialnetwork.org/
  */
 $posts = new OssnWall;
-$count = $posts->GetPostByOwner($params['group']->guid, 'group:pending', true);
-$posts = $posts->GetPostByOwner($params['group']->guid, 'group:pending');
+$count = $posts->GetPostByOwner($params['group']->guid, 'group:pending', true, 'guid asc');
+$posts = $posts->GetPostByOwner($params['group']->guid, 'group:pending', false, 'guid asc');
+$something = false;
 if (empty($posts)) {
     echo '<div class="ossn-group-no-requests">' . ossn_print('no:pendings') . '</div>';
 } else {
 	echo '<div class="col-md-7 margin-top-10" style="float:inherit;"><div class="group-wall"><div class="user-activity">';
     foreach ($posts as $post) {
 		if ($params['display_all'] || (!$params['display_all'] && $post->poster_guid == $params['user'])) {
+			$something = true;
 
 			$post->type = 'group';
 			$post->pending = true;
@@ -50,4 +52,7 @@ if (empty($posts)) {
 	}
 	echo '</div></div></div>';
 	//echo ossn_view_pagination($count);
+}
+if (!empty($posts) && !$something) {
+	echo '<div class="ossn-group-no-requests">' . ossn_print('no:pendings') . '</div>';
 }

@@ -18,11 +18,17 @@ if (isset($owner) && !empty($owner)) {
     $OssnWall->owner_guid = $owner;
 }
 
-$OssnWall->type = 'group';
+$group = ossn_get_group_by_guid($owner);
+if ($group->validation == '1') {
+	$OssnWall->type = 'group:pending';
+} else {
+	$OssnWall->type = 'group';
+}
 
 $post = input('post');
 $friends = false;
 $location = input('location');
+
 
 if ($OssnWall->Post($post, $friends, $location, OSSN_PRIVATE)) {
 		if(ossn_is_xhr()) {
@@ -37,7 +43,11 @@ if ($OssnWall->Post($post, $friends, $location, OSSN_PRIVATE)) {
 		}
 		//no need to show message on success.
 		//3.x why not? $arsalanshah
-		ossn_trigger_message(ossn_print('post:created'));
+		if ($group->validation == '1') {
+			ossn_trigger_message(ossn_print('pending:post:created'));
+		} else {
+			ossn_trigger_message(ossn_print('post:created'));
+		}
 		redirect(REF);
 } else {
     ossn_trigger_message(ossn_print('post:create:error'), 'error');

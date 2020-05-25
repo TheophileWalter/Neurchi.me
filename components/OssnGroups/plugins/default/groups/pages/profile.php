@@ -167,8 +167,14 @@ $members = $params['group']->getMembers();
 								'title' => ossn_print('about:group'),
 								'contents' => nl2br($params['group']->description),
 								'class' => 'widget-description',
-			));					
-			if ($params['group']->owner_guid == ossn_loggedin_user()->guid || ossn_isAdminLoggedin()) {
+            ));
+            $wall = new OssnWall;
+            $pendings = $wall->GetPostByOwner($params['group']->guid, 'group:pending', false, 'guid asc');
+            $pendings_number = 0;
+            $user_guid = ossn_loggedin_user()->guid;
+			if ($params['group']->owner_guid == $user_guid || ossn_isAdminLoggedin()) {
+                $pendings_number = is_array($pendings) ? count($pendings) : 0;
+                
 				$member_requests = ossn_plugin_view('output/url', array(
 										'text' => ossn_print('view:all'),
 										'href' => ossn_group_url($params['group']->guid).'requests'
@@ -182,7 +188,24 @@ $members = $params['group']->getMembers();
 								'contents' => $member_requests,
 								'class' => 'group-requests-widget',
 				));					
-			}
+			} else {
+                foreach($pendings as $post) {
+                    if ($post->poster_guid == $user_guid) {
+                        $pendings_number++;
+                    }
+                }
+            }
+            if ($pendings_number > 0) {
+                $pending_posts = ossn_plugin_view('output/url', array(
+                    'text' => ossn_print('view:all'),
+                    'href' => ossn_group_url($params['group']->guid).'pendings'
+                        ));
+                echo ossn_view_widget(array(
+                            'title' => ossn_print('pending:link', array($pendings_number)),
+                            'contents' => $pending_posts,
+                            'class' => 'group-requests-widget',
+                ));				
+            }
 			$count = $params['group']->getMembers(true);
             $limit = 1;
             if($members) {

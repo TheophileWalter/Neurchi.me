@@ -31,6 +31,20 @@ $group = $params['group'];
     <option value='2' <?php echo $open; ?>> <?php echo ossn_print('public'); ?> </option>
     <option value='1' <?php echo $close; ?>> <?php echo ossn_print('close'); ?> </option>
 </select>
+<label><?php echo ossn_print('group:post_validation'); ?></label>
+<select name="validation">
+    <?php
+    if ($group->validation == '0') {
+        $validation_off = 'selected';
+        $validation_on = '';
+    } elseif ($group->validation == '1') {
+        $validation_on = 'selected';
+        $validation_off = '';
+    }
+    ?>
+    <option value="0" <?php echo $validation_off; ?>> <?php echo ossn_print('admin:button:disabled'); ?> </option>
+    <option value="1" <?php echo $validation_on; ?>> <?php echo ossn_print('admin:button:enabled'); ?> </option>
+</select>
 <input type="hidden" name="group" value="<?php echo $group->guid; ?>"/>
 <input type="submit" value="<?php echo ossn_print('save'); ?>" class="btn btn-success"/>
 <a class="btn btn-warning" href="<?php echo ossn_site_url("action/group/cover/delete?guid={$group->guid}", true);?>"><i class="fa fa-trash-o"></i><?php echo ossn_print('group:delete:cover');?></a>

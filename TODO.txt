@@ -1,12 +1,11 @@
 [X] Actualités des groupes sur la page d'accueil
 [ ] Modérateurs pour les groupes
-[ ] Filtre pour les groupes
+[X] Filtre pour les groupes
     [X] Page des publications en attente pour le propriétaire du groupe
     [X] Page des publications en attente pour l'utilisateur (uniquement les siennes)
-    [ ] Option d'activation de la validation des publications dans les paramètres du groupe
-    [ ] Liens vers les pages de publications en attente (dans la barre de droite si les publications en attente sont activées)
-    [ ] Modification du code de création de post pour mettre le bon type suivant les paramètres du groupe
-    [ ] Notification si la publication est acceptée
+    [X] Option d'activation de la validation des publications dans les paramètres du groupe (création et modification)
+    [X] Liens vers les pages de publications en attente (dans la barre de droite si les publications en attente sont activées)
+    [X] Modification du code de création de post pour mettre le bon type suivant les paramètres du groupe
 [X] Cliquer sur les images pour les voir en taille réel
 [ ] Album des photos d'un groupe (s'inspirer de celui de l'utilisateur)
 [ ] Corriger l'affichage des bannières sur mobile

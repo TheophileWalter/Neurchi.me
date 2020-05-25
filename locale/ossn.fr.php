@@ -276,7 +276,7 @@ S'il vous plaît cliquez sur le lien ci-dessous pour réinitialiser le mot de pa
 	'php:function' => 'Fonction PHP',
 	'admin:old:com' => "Votre fichier ossn_com.xml est basé sur une ancienne version d'Ossn. Merci de mettre à jour le composant '%s'.",
 	'admin:old:theme' => "Votre fichier ossn_theme.xml est basé sur une ancienne version d'Ossn. Merci de mettre à jour le yhème '%s'.",
-	'admin:button:disabled' => 'Disactivé',
+	'admin:button:disabled' => 'Désactivé',
 	'admin:flush:cache' => 'Vider Cache',
 	'admin:com:version' => 'Version',
 	'admin:com:author' => 'Auteur',

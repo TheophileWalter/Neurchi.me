@@ -118,7 +118,7 @@ class OssnWall extends OssnObject {
 		 *
 		 * @return object;
 		 */
-		public function GetPostByOwner($owner, $type = 'user', $count = false) {
+		public function GetPostByOwner($owner, $type = 'user', $count = false, $order = '') {
 				self::initAttributes();
 				if(empty($owner) || empty($type)) {
 						return false;
@@ -130,6 +130,9 @@ class OssnWall extends OssnObject {
 						'owner_guid' => $owner,
 						'count' => $count
 				);
+				if ($order != '') {
+					$vars['order_by'] = $order;
+				}
 				return $this->searchObject($vars);
 		}
 		

@@ -11,6 +11,11 @@
 ?>
 <label><?php echo ossn_print('group:name'); ?></label>
 <input type="text" name="groupname"/>
+<label><?php echo ossn_print('group:post_validation'); ?></label>
+<select name="validation">
+    <option value="0"> <?php echo ossn_print('admin:button:disabled'); ?> </option>
+    <option value="1"> <?php echo ossn_print('admin:button:enabled'); ?> </option>
+</select>
 <input type="submit" class="ossn-hidden" id="ossn-group-submit"/>
 
 <div class="ossn-privacy">

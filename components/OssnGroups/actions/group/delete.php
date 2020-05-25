@@ -14,6 +14,13 @@ $guid = input('guid');
 $group = ossn_get_group_by_guid($guid);
 
 if(($group->owner_guid === ossn_loggedin_user()->guid) || ossn_isAdminLoggedin()){
+	// Before deleting group, delete all pending posts
+	$wall = new OssnWall;
+	$posts = $wall->GetPostByOwner($guid, 'group:pending', false, 'guid asc');
+	foreach($posts as $post) {
+		$wall->deletePost($post->guid);
+	}
+	// Then delete the group
 	if ($group->deleteGroup($group->guid)) {
     	ossn_trigger_message(ossn_print('group:deleted'));
     	redirect();
