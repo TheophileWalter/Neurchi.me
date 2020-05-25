@@ -71,5 +71,19 @@ $de = array(
 	'group:memb:make:owner' => 'Zum Gruppen-Eigentümer machen',
     	'group:memb:make:owner:confirm' => 'Achtung! Dieser Vorgang wird >> %s << zum neuen Eigentümer dieser Gruppe machen, und Du wirst alle administrativen Privilegien verlieren. Willst Du das wirklich?',
     	'group:memb:make:owner:admin:confirm' => 'Achtung! Dieser Vorgang wird >> %s << zum neuen Eigentümer dieser Gruppe machen, und der vorherige Eigentümer wird alle administrativen Privilegien verlieren. Willst Du das wirklich?',
-);
+
+        
+    'pendings' => 'Pendings',
+    'no:pendings' => 'No pending publication',
+    'pending:accept' => 'Accept',
+    'pending:refuse' => 'Refuse',
+    'pending:accept:error' => 'Unable to accept publication, retry later.',
+    'pending:accepted' => 'Publication accepted',
+    'pending:refuse:error' => 'Unable to refuse publications, retry later.',
+    'pending:refuse:success' => 'Publication refused.',
+    'group:post_validation' => 'Publication validation',
+    'pending:link' => 'PENDING (%s)',
+    'pending:post:created' => 'Publication created ! It is pending.',
+
+    );
 ossn_register_languages('de', $de); 

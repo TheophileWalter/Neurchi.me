@@ -70,5 +70,18 @@ $eo = array(
 	'group:delete:cover' => 'Forigi kovrilan bildon',
 	'group:delete:cover:error' => 'Eraro okazis dum forigo de la kovrila bildo',
 	'group:delete:cover:success' => 'La kovrila bildo estas sukcese forigita',	
+
+    'pendings' => 'Pendings',
+    'no:pendings' => 'No pending publication',
+    'pending:accept' => 'Accept',
+    'pending:refuse' => 'Refuse',
+    'pending:accept:error' => 'Unable to accept publication, retry later.',
+    'pending:accepted' => 'Publication accepted',
+    'pending:refuse:error' => 'Unable to refuse publications, retry later.',
+    'pending:refuse:success' => 'Publication refused.',
+    'group:post_validation' => 'Publication validation',
+    'pending:link' => 'PENDING (%s)',
+    'pending:post:created' => 'Publication created ! It is pending.',
+
 );
 ossn_register_languages('eo', $eo); 

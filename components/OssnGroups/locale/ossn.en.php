@@ -71,5 +71,17 @@ $en = array(
 	'group:delete:cover:error' => 'An error occurred while deleting the cover image',
 	'group:delete:cover:success' => 'The cover image was successfully deleted',
 
+    'pendings' => 'Pendings',
+    'no:pendings' => 'No pending publication',
+    'pending:accept' => 'Accept',
+    'pending:refuse' => 'Refuse',
+    'pending:accept:error' => 'Unable to accept publication, retry later.',
+    'pending:accepted' => 'Publication accepted',
+    'pending:refuse:error' => 'Unable to refuse publications, retry later.',
+    'pending:refuse:success' => 'Publication refused.',
+    'group:post_validation' => 'Publication validation',
+    'pending:link' => 'PENDING (%s)',
+    'pending:post:created' => 'Publication created ! It is pending.',
+
 );
 ossn_register_languages('en', $en); 

@@ -70,5 +70,18 @@ $el = array(
 	'group:delete:cover' => 'Διαγραφή καλύμματος',
 	'group:delete:cover:error' => 'Παρουσιάστηκε σφάλμα κατά τη διαγραφή της εικόνας εξωφύλλου',
 	'group:delete:cover:success' => 'Η εικόνα του καλύμματος διαγράφηκε με επιτυχία',
+
+    'pendings' => 'Pendings',
+    'no:pendings' => 'No pending publication',
+    'pending:accept' => 'Accept',
+    'pending:refuse' => 'Refuse',
+    'pending:accept:error' => 'Unable to accept publication, retry later.',
+    'pending:accepted' => 'Publication accepted',
+    'pending:refuse:error' => 'Unable to refuse publications, retry later.',
+    'pending:refuse:success' => 'Publication refused.',
+    'group:post_validation' => 'Publication validation',
+    'pending:link' => 'PENDING (%s)',
+    'pending:post:created' => 'Publication created ! It is pending.',
+
 );
 ossn_register_languages('el', $el); 
