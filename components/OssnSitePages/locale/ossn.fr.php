@@ -11,7 +11,7 @@
 $fr = array(
     'ossnsitepages' => 'Pages du Site',
     'site:privacy' => 'Confidentialité',
-    'site:about' => 'A propos',
+    'site:about' => '&Agrave; propos',
     'site:terms' => 'Termes et Conditions',
 
     'page:saved' => 'Page enregistrée avec succès!',
