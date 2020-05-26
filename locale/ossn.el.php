@@ -23,7 +23,7 @@ $el = array(
 	
 	'register:ok:message' => "Ο λογαριασμός σας έχει εγγραφεί. Ένα Email ενεργοποίησης σας έχει σταλεί. Εάν δεν λάβατε το Email, ελέγξτε το φάκελο Spam / Junk.",
 	
-	'copyright' => '&copy; COPYRIGHT',
+	'copyright' => '',
 	'powered' => 'Powered by the Open Source Social Network.',
 	
 	'name' => 'Όνομα',

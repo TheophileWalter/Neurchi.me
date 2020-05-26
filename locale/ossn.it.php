@@ -23,7 +23,7 @@ $en = array(
 
 	'register:ok:message' => "Il tuo account è stato creato. Ti è stata inviata una e-mail di attivazione. Se cosi non fosse controlla nella cartella di spam.",
 
-	'copyright' => '&copy; COPYRIGHT',
+	'copyright' => '',
 	'powered' => 'Powered by the Open Source Social Network.',
 
 	'name' => 'Nome',

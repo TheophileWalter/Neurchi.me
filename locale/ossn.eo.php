@@ -23,7 +23,7 @@ $eo = array(
 	
 	'register:ok:message' => "Via konto estas registrita. Retpoŝto kun aktiviga kodo estas sendita al via retpoŝtujo. Se vi ne ricevis la retpoŝton, bonvolu kontroli vian trudmesaĝujon.",
 	
-	'copyright' => '&copy; KOPIRAJTO',
+	'copyright' => '',
 	'powered' => 'Powered by the Open Source Social Network.',
 	
 	'name' => 'Nomo',

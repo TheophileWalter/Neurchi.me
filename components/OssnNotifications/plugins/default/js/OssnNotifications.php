@@ -252,6 +252,9 @@ Ossn.RegisterStartupFunction(function() {
         				callback: function(callback) {
            					if(callback['success']){
 								Ossn.trigger_message(callback['success']);
+                                $('.ossn-icons-topbar-notifications-new').addClass('ossn-icons-topbar-notification');
+                                $('.ossn-icons-topbar-notifications-new').removeClass('ossn-icons-topbar-notifications-new');
+                                $('.ossn-notification-container').hide(500);
 							}
 							if(callback['error']){
 								Ossn.trigger_message(callback['error']);								

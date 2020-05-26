@@ -13,3 +13,9 @@
 [X] Changer l'icone de groupe par défaut
 [X] Afficher les publicités sur mobile
 [ ] Mettre un sujet en annonce dans un groupe
+[ ] Afficher le nombre de notifications dans le titre de la page
+[X] Aimer par défaut quand on clique sur le lien "Aimer" (au lieu d'ouvrir la liste)
+[X] Supprimer la pastille de notifications quand on les marque comme lues
+[X] Ajouter les - et _ dans les caractères autorisés pour un nom d'utilisateur
+[ ] Décaler les fenêtres de chat tout à droite de la page
+[X] Suppression du copyright en bas des pages

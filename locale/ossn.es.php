@@ -25,7 +25,7 @@ $es = array(
 	
 	'register:ok:message' => 'Se ha registrado su cuenta. Se ha enviado un correo electrónico de activación a su buzón de correo. Si no recibió el correo electrónico, compruebe su carpeta de spam/basura.',
 	
-	'copyright' => '&copy; COPYRIGHT',
+	'copyright' => '',
 	'powered' => 'Powered by the Open Source Social Network.',
 	
 	'name' => 'Nombre',

@@ -54,12 +54,6 @@ function ossn_initialize() {
 		
 		ossn_add_hook('newsfeed', "sidebar:left", 'newfeed_menu_handler');
 		
-		ossn_register_menu_item('footer', array(
-				'name' => 'a_copyrights',
-				'text' => ossn_print('copyright') . ' ' . ossn_site_settings('site_name'),
-				'href' => ossn_site_url()
-		));
-		
 		ossn_register_menu_item('footer', ossn_pow_lnk_args());
 		
 		ossn_extend_view('ossn/endpoint', 'author/view');

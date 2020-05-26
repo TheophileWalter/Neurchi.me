@@ -23,7 +23,7 @@ $nl = array(
 	
 	'register:ok:message' => "je account is geregistreerd. Een activatie email is naar je mailadres verstuurd. Als u de email niet heeft ontvangen, bekijk dan je spambox.",
 	
-	'copyright' => '&copy;',
+	'copyright' => '',
 	'powered' => 'Powered by the Open Source Social Network.',
 	
 	'name' => 'Naam',

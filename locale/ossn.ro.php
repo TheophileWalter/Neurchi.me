@@ -23,7 +23,7 @@ $ro = array(
 	
 	'register:ok:message' => "Contul tau a fost inregistrat. Un email a fost trimis la adresa ta de email. Daca nu ai primit emailul verifica spam/junk .",
 	
-	'copyright' => '&copy; COPYRIGHT',
+	'copyright' => '',
 	'powered' => 'Powered by the Open Source Social Network.',
 	
 	'name' => 'Nume',

@@ -62,6 +62,7 @@ function ossn_wall_like_menu($callback, $type, $params) {
 								'href' => "javascript:void(0);",
 								'id' => 'ossn-like-' . $guid,
 								'data-reaction' => "Ossn.PostLike({$guid}, '<<reaction_type>>');",
+								'onclick' => "Ossn.PostLike({$guid}, 'like');$('.ossn-like-reactions-panel').remove();",
 								'text' => ossn_print('ossn:like')
 						));
 				} else {
@@ -93,6 +94,7 @@ function ossn_entity_like_link($callback, $type, $params) {
 								'href' => "javascript:void(0);",
 								'id' => 'ossn-elike-' . $guid,
 								'data-reaction' => "Ossn.EntityLike({$guid}, '<<reaction_type>>');",
+								'onclick' => "Ossn.EntityLike({$guid}, 'like');$('.ossn-like-reactions-panel').remove();",
 								'text' => ossn_print('ossn:like')
 						));
 				} else {

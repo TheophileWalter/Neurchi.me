@@ -23,7 +23,7 @@ $en = array(
 	
 	'register:ok:message' => "Your account has been registered. An activation email has been sent to your mailbox. If you didn't receive the email, please check your spam/junk folder.",
 	
-	'copyright' => '&copy; COPYRIGHT',
+	'copyright' => '',
 	'powered' => 'Powered by the Open Source Social Network.',
 	
 	'name' => 'Name',

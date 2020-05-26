@@ -23,7 +23,7 @@ $ru = array(
 	
 	'register:ok:message' => "Ваш аккаунт зарегестрирован. Ссылка для активации отправлена на Вашу почту. Если Вы не получили сообщения, проверьте папку со спамом.",
 	
-	'copyright' => '&copy; Права',
+	'copyright' => '',
 	'powered' => 'Powered by the Open Source Social Network.',
 	
 	'name' => 'Имя',

@@ -26,7 +26,7 @@ Ossn.PostUnlike = function(post) {
             if (callback['done'] !== 0) {
                 $('#ossn-like-' + post).html(callback['button']);
                 $('#ossn-like-' + post).attr('data-reaction', 'Ossn.PostLike(' + post + ', "<<reaction_type>>");');
-				$('#ossn-like-' + post).removeAttr('onclick'); 
+				$('#ossn-like-' + post).attr('onclick', 'Ossn.PostLike(' + post + ', \'like\');$(\'.ossn-like-reactions-panel\').remove();'); 
 				//reactions
 				$parent = $('#ossn-like-' + post).parent().parent().parent();				
 				if(callback['container']){
@@ -80,7 +80,7 @@ Ossn.EntityUnlike = function(entity) {
             if (callback['done'] !== 0) {
                 $('#ossn-elike-' + entity).html(callback['button']);
                 $('#ossn-elike-' + entity).attr('data-reaction', 'Ossn.EntityLike(' + entity + ', "<<reaction_type>>");');
-				$('#ossn-elike-' + entity).removeAttr('onclick'); 
+				$('#ossn-elike-' + entity).attr('onclick', 'Ossn.EntityLike(' + entity + ', \'like\');$(\'.ossn-like-reactions-panel\').remove();'); 
 				//reactions				
 				$parent = $('#ossn-elike-' + entity).parent().parent().parent();				
 				if(callback['container']){
@@ -223,7 +223,7 @@ Ossn.RegisterStartupFunction(function() {
             var $type = $.trim($item.attr('data-type'));
             var $url = $item.attr('href');
 			if($(this).attr('class') == 'ossn-like-comment' && $type == 'Like'){
-				return false;	
+				$item.attr('data-reaction', 'like');
 			}
             Ossn.PostRequest({
                 url: $url,

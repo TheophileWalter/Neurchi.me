@@ -22,7 +22,7 @@ $he = array(
 	'its:free' => "",
 	
 	'register:ok:message' => "החשבון נוצר בהצלחה, מייל הפעלה נשלח אליך. אם אינך רואה את המייל יתכן והוא הגיע לספאם.",
-	'copyright' => '&copy; כל הזכויות שמורות',
+	'copyright' => '',
 	'powered' => 'Powered by the Open Source Social Network.',
 	
 	'name' => 'שם',

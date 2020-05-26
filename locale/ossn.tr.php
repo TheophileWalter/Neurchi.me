@@ -23,7 +23,7 @@ $tr = array(
 	
 	'register:ok:message' => "Hesabınız oluşturuldu! Şimdi e-mail adresinize gidip onayladıktan sonra hesabınızı etkinleştirebilirsiniz.",
 	
-	'copyright' => '&copy; Telif Hakkı',
+	'copyright' => '',
 	'powered' => 'Powered by the Open Source Social Network.',
 	
 	'name' => 'Adı',

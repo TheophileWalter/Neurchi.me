@@ -23,7 +23,7 @@ $pt = array(
 	
 	'register:ok:message' => "Sua conta foi criada com sucesso. Um e-mail de ativação foi enviado para seu e-mail. Caso você não receba o e-mail, por favor verifique sua pasta de spam.",
 	
-	'copyright' => '&copy; COPYRIGHT',
+	'copyright' => '',
 	'powered' => 'Powered by the Open Source Social Network.',
 	
 	'name' => 'Nome',
