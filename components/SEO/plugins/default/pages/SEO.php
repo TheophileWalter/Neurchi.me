@@ -44,27 +44,26 @@ $ogimagehoehe = $settings->ogimagehoehe;
 $ogimagealt = $settings->ogimagealt;
 $fbappid = $settings->fbappid;
 
-?>
-<meta name="title" content="<?php echo $metaseitenname ?>" />
-<meta name="description" content="<?php echo $metaseitenbeschreibung ?>" />
-<meta name="author" content="<?php echo $metaautor ?>" />
-<meta name="copyright" content="<?php echo $metacopyright ?>" />
-<meta name="keywords" content="<?php echo $metarobots ?>" />
-<meta name="robots" content="<?php echo $metarobots ?>" />
-<meta name="google-site-verification" content="<?php echo $metagooglesiteverification ?>" />
-<meta name="twitter:card" content="<?php echo $twittercard ?>" />
-<meta name="twitter:image" content="<?php echo $twitterimage ?>" />
-<meta name="twitter:image:alt" content="<?php echo $twitterimagealt ?>" />
-<meta name="twitter:title" content="<?php echo $twitterseitentitel ?>" />
-<meta name="twitter:description" content="<?php echo $twitterdescription ?>" />
-<meta property="og:url" content="<?php echo $ogseitenurl ?>" />
-<meta property="og:title" content="<?php echo $ogseitenname ?>" />
-<meta property="og:description" content="<?php echo $ogseitenbeschreibung ?>" />
-<meta property="og:locale" content="<?php echo $ogsprache ?>" />
-<meta property="og:type" content="<?php echo $ogseitentyp ?>" />
-<meta property="og:image" content="<?php echo $ogimage ?>" />
-<meta property="og:image:secure_url" content="<?php echo $ogimagehttps ?>" />
-<meta property="og:image:width" content="<?php echo $ogimagebreite ?>" />
-<meta property="og:image:height" content="<?php echo $ogimagehoehe ?>" />
-<meta property="og:image:alt" content="<?php echo $ogimagealt ?>" />
-<meta property="fb:app_id" content="<?php echo $fbappid ?>" />
+echo empty($metaseitenname) ? '' : "<meta name=\"title\" content=\"$metaseitenname\" />\n";
+echo empty($metaseitenbeschreibung) ? '' : "<meta name=\"description\" content=\"$metaseitenbeschreibung\" />\n";
+echo empty($metaautor) ? '' : "<meta name=\"author\" content=\"$metaautor\" />\n";
+echo empty($metacopyright) ? '' : "<meta name=\"copyright\" content=\"$metacopyright\" />\n";
+echo empty($metakeywords) ? '' : "<meta name=\"keywords\" content=\"$metakeywords\" />\n";
+echo empty($metarobots) ? '' : "<meta name=\"robots\" content=\"$metarobots\" />\n";
+echo empty($metagooglesiteverification) ? '' : "<meta name=\"google-site-verification\" content=\"$metagooglesiteverification\" />\n";
+echo empty($twittercard) ? '' : "<meta name=\"twitter:card\" content=\"$twittercard\" />\n";
+echo empty($twitterimage) ? '' : "<meta name=\"twitter:image\" content=\"$twitterimage\" />\n";
+echo empty($twitterimagealt) ? '' : "<meta name=\"twitter:image:alt\" content=\"$twitterimagealt\" />\n";
+echo empty($twitterseitentitel) ? '' : "<meta name=\"twitter:title\" content=\"$twitterseitentitel\" />\n";
+echo empty($twitterdescription) ? '' : "<meta name=\"twitter:description\" content=\"$twitterdescription\" />\n";
+echo empty($ogseitenurl) ? '' : "<meta property=\"og:url\" content=\"$ogseitenurl\" />\n";
+echo empty($ogseitenname) ? '' : "<meta property=\"og:title\" content=\"$ogseitenname\" />\n";
+echo empty($ogseitenbeschreibung) ? '' : "<meta property=\"og:description\" content=\"$ogseitenbeschreibung\" />\n";
+echo empty($ogsprache) ? '' : "<meta property=\"og:locale\" content=\"$ogsprache\" />\n";
+echo empty($ogseitentyp) ? '' : "<meta property=\"og:type\" content=\"$ogseitentyp\" />\n";
+echo empty($ogimage) ? '' : "<meta property=\"og:image\" content=\"$ogimage\" />\n";
+echo empty($ogimagehttps) ? '' : "<meta property=\"og:image:secure_url\" content=\"$ogimagehttps\" />\n";
+echo empty($ogimagebreite) ? '' : "<meta property=\"og:image:width\" content=\"$ogimagebreite\" />\n";
+echo empty($ogimagehoehe) ? '' : "<meta property=\"og:image:height\" content=\"$ogimagehoehe\" />\n";
+echo empty($ogimagealt) ? '' : "<meta property=\"og:image:alt\" content=\"$ogimagealt\" />\n";
+echo empty($fbappid) ? '' : "<meta property=\"fb:app_id\" content=\"$fbappid\" />\n";

@@ -118,7 +118,7 @@ class OssnWall extends OssnObject {
 		 *
 		 * @return object;
 		 */
-		public function GetPostByOwner($owner, $type = 'user', $count = false, $order = '') {
+		public function GetPostByOwner($owner, $type = 'user', $count = false, $order = '', $disable_limit = false) {
 				self::initAttributes();
 				if(empty($owner) || empty($type)) {
 						return false;
@@ -132,6 +132,9 @@ class OssnWall extends OssnObject {
 				);
 				if ($order != '') {
 					$vars['order_by'] = $order;
+				}
+				if ($disable_limit) {
+					$vars['page_limit'] = false;
 				}
 				return $this->searchObject($vars);
 		}

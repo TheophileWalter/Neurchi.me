@@ -19,3 +19,12 @@
 [X] Ajouter les - et _ dans les caractères autorisés pour un nom d'utilisateur
 [ ] Décaler les fenêtres de chat tout à droite de la page
 [X] Suppression du copyright en bas des pages
+[ ] Ajout de comptes certifiés
+[ ] Grouper les notifications (une seule notification pour tous les likes d'une publication, ...)
+[X] Fermer la fenêtre des likes en cliquant n'importe où (pas uniquement sur la croix)
+[X] Bouton Home à droite du menu hamburger sur mobile
+[X] Lien sur les images dans les commentaires
+[X] Corriger le bug du mélange des champs de SEO
+[X] Supprimer le bonton "Feedback" du site
+[X] Mettre les résultats de groupes dans la recherche par défaut
+[X] Supprimer la limite de selection de 10 postes en attente de validation (sauf pour la page qui les liste)

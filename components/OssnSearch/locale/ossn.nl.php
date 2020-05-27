@@ -14,5 +14,6 @@ $nl = array(
 	'search:result' => 'Zoekresultaten voor %s',
 	'ossn:search:topbar:search' => 'Zoek groepen, vrienden en meer.',
 	'ossn:search:no:result' => 'Probeer het nog maar is want dit gaat nergens over...',
+	'search:all' => 'All',
 );
 ossn_register_languages('nl', $nl); 

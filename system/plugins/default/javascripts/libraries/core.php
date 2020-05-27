@@ -490,6 +490,7 @@ Ossn.MessageBox = function($url) {
 		beforeSend: function() {
 			$('.ossn-halt').addClass('ossn-light');
 			$('.ossn-halt').attr('style', 'height:' + $(document).height() + 'px;');
+			$('.ossn-halt').attr('onclick', 'Ossn.MessageBoxClose();');
 			$('.ossn-halt').show();
 			$('.ossn-message-box').html('<div class="ossn-loading ossn-box-loading"></div>');
 			$('.ossn-message-box').fadeIn('slow');

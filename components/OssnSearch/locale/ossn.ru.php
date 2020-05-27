@@ -15,5 +15,6 @@ $ru = array(
 	'search:result' => 'Искать результаты для %s',
 	'ossn:search:topbar:search' => 'Найти друзей, группы и т.п.',
 	'ossn:search:no:result' => 'Ничего не найдено!',
+	'search:all' => 'All',
 );
 ossn_register_languages('ru', $ru); 

@@ -169,7 +169,7 @@ $members = $params['group']->getMembers();
 								'class' => 'widget-description',
             ));
             $wall = new OssnWall;
-            $pendings = $wall->GetPostByOwner($params['group']->guid, 'group:pending', false, 'guid asc');
+            $pendings = $wall->GetPostByOwner($params['group']->guid, 'group:pending', false, 'guid asc', true);
             $pendings_number = 0;
             $user_guid = ossn_loggedin_user()->guid;
 			if ($params['group']->owner_guid == $user_guid || ossn_isAdminLoggedin()) {

@@ -15,5 +15,6 @@ $el = array(
 	'search:result' => 'Αποτελέσματα αναζήτησης για %s',
 	'ossn:search:topbar:search' => 'Αναζητήστε ομάδες, φίλους και πολλά άλλα.',
 	'ossn:search:no:result' => 'Δεν βρέθηκαν αποτελέσματα!',
+	'search:all' => 'All',
 );
 ossn_register_languages('el', $el); 

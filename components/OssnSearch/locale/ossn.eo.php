@@ -15,5 +15,6 @@ $eo = array(
 	'search:result' => 'Serĉaj rezultoj de %s',
 	'ossn:search:topbar:search' => 'Serĉi grupojn, geamikojn kaj pli.',
 	'ossn:search:no:result' => 'Neniuj rezultoj estas trovitaj!',
+	'search:all' => 'All',
 );
 ossn_register_languages('eo', $eo); 

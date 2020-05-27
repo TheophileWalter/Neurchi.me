@@ -15,5 +15,6 @@ $fr = array(
 	'search:result' => 'Résultats de recherche pour %s',
 	'ossn:search:topbar:search' => 'Rechercher des groupes, amis et plus.',
 	'ossn:search:no:result' => 'Aucun résultat!',
+	'search:all' => 'Tout',
 );
 ossn_register_languages('fr', $fr); 

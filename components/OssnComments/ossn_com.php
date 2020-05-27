@@ -251,6 +251,7 @@ function ossn_comment_page($pages) {
 		$page = $pages[0];
 		switch($page) {
 				case 'image':
+				case 'full':
 						if(!empty($pages[1]) && !empty($pages[2])) {
 								$file = ossn_get_userdata("annotation/{$pages[1]}/comment/photo/{$pages[2]}");
 								if(is_file($file)) {
@@ -261,7 +262,11 @@ function ossn_comment_page($pages) {
 												header("HTTP/1.1 304 Not Modified");
 												exit;
 										}
-										$image    = ossn_resize_image($file, 300, 300);
+										if ($page == 'image') {
+											$image = ossn_resize_image($file, 300, 300);
+										} else {
+											$image = file_get_contents($file);
+										}
 										$filesize = strlen($image);
 										header("Content-type: image/jpeg");
 										header('Expires: ' . gmdate('D, d M Y H:i:s \G\M\T', strtotime("+6 months")), true);

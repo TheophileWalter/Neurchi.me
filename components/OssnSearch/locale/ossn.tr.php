@@ -15,5 +15,6 @@ $tr = array(
 	'search:result' => 'Search results for %s',
 	'ossn:search:topbar:search' => 'İnsanları, yerleri ve diğer şeyleri ara...',
 	'ossn:search:no:result' => 'Sonuç bulunamadı!',
+	'search:all' => 'All',
 );
 ossn_register_languages('tr', $tr); 

@@ -13,6 +13,7 @@
 					<li id="sidebar-toggle" data-toggle='0'>
 						<a role="button" data-target="#"> <i class="fa fa-th-list"></i></a>
 					</li>
+					<a href="<?php echo ossn_site_url();?>" class="mobile-home-button"> <i class="fa fa-home"></i></a>
 				</div>
 				<?php } ?>
 			</div>

@@ -1612,6 +1612,15 @@ li[class^="menu-section-item-"] {
 	margin-left: 25px;
 }
 
+.ossn-menu-search-all .text:before {
+	font-family: FontAwesome;
+	content: "\f0ac";
+	display: absolute;
+	padding-right: 10px;
+	vertical-align: middle;
+	float: left;
+}
+
 .ossn-menu-search-users .text:before {
 	font-family: FontAwesome;
 	content: "\f007";
@@ -2291,6 +2300,11 @@ footer .ossn-footer-menu a:last-child::after {
 }
 
 
+
+.mobile-home-button {
+	display: none;
+}
+
 /**************************
 	Mobile Layout Settings
 ***************************/
@@ -2545,6 +2559,9 @@ footer .ossn-footer-menu a:last-child::after {
 	.logo img {
 		display: none;
 	}
+	.mobile-home-button {
+		display: inline-block;
+	}
 	.home-left-contents .description {
 		font-size: 16px;
 	}
@@ -2618,6 +2635,9 @@ footer .ossn-footer-menu a:last-child::after {
 	.logo img {
 		display: none;
 	}
+	.mobile-home-button {
+		display: inline-block;
+	}
 }
 
 @media only screen and (max-width: 1199px) {
@@ -2663,6 +2683,9 @@ footer .ossn-footer-menu a:last-child::after {
      **************************/
 	.logo img {
 		display: none;
+	}
+	.mobile-home-button {
+		display: inline-block;
 	}
 }
 

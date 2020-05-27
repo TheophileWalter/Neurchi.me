@@ -15,5 +15,6 @@ $ro = array(
 	'search:result' => 'Rezultatele cautarii %s',
 	'ossn:search:topbar:search' => 'Cauta grupuri, prieteni si mai mult.',
 	'ossn:search:no:result' => 'Nici un rezultat!',
+	'search:all' => 'All',
 );
 ossn_register_languages('ro', $ro); 

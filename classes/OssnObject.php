@@ -317,6 +317,7 @@ class OssnObject extends OssnEntities {
 		 *    'count'			=> True if you wanted to count search items.		 
 		 *    'limit'			=> Result limit default, Default is 10 values
 		 *	  'order_by'    	=> To show result in sepcific order. Default is Assending
+		 *    'page_limit'      => Limit search result number
 		 * 
 		 * reutrn array|false;
 		 *

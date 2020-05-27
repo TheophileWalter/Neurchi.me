@@ -15,5 +15,6 @@ $he = array(
 	'search:result' => 'תוצאות חיפוש עבור: %s',
 	'ossn:search:topbar:search' => 'חפש בקבוצות, חברים ועוד.',
 	'ossn:search:no:result' => 'לא נמצאו תוצאות!',
+	'search:all' => 'All',
 );
 ossn_register_languages('he', $he); 

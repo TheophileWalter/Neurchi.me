@@ -26,7 +26,7 @@ function ossn_feedback_init() {
 		
 		$feedback = new Feedback;
 		if(!$feedback->feedbackExists() && ossn_isLoggedin()) {
-				ossn_extend_view('ossn/site/head', 'feedback/js');
+				//ossn_extend_view('ossn/site/head', 'feedback/js');
 				ossn_register_page('feedback', 'feedback_page_handler');
 		}
 }

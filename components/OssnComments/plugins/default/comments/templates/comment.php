@@ -54,8 +54,9 @@ if($datalikes  > 0){
 						        $image = $comment->getParam('file:comment:photo');
 						        if (!empty($image)) {
 						            $image = str_replace('comment/photo/', '', $image);
-						            $image = ossn_site_url("comment/image/{$comment->id}/{$image}");
-						            echo "<img src='{$image}' />";
+									$image2 = ossn_site_url("comment/image/{$comment->id}/{$image}");
+									$full = ossn_site_url("comment/full/{$comment->id}/{$image}");
+						            echo "<a href=\"{$full}\" target=\"_blank\"><img src='{$image2}' /></a>";
 						        }
 						        ?>
 				</p>

@@ -16,7 +16,7 @@ $group = ossn_get_group_by_guid($guid);
 if(($group->owner_guid === ossn_loggedin_user()->guid) || ossn_isAdminLoggedin()){
 	// Before deleting group, delete all pending posts
 	$wall = new OssnWall;
-	$posts = $wall->GetPostByOwner($guid, 'group:pending', false, 'guid asc');
+	$posts = $wall->GetPostByOwner($guid, 'group:pending', false, 'guid asc', true);
 	foreach($posts as $post) {
 		$wall->deletePost($post->guid);
 	}

@@ -44,7 +44,7 @@ if ($edit->updateGroup($name, $desc, $group->guid)) {
     // If group is updated without post validation, we accept all pending posts
     if (isset($accept_pending) && $accept_pending) {
         $wall = new OssnWall;
-        $posts = $wall->GetPostByOwner($group->guid, 'group:pending', false, 'guid asc');
+        $posts = $wall->GetPostByOwner($group->guid, 'group:pending', false, 'guid asc', true);
         foreach($posts as $post) {
             $group->acceptPost($post->guid, $group->guid);
         }

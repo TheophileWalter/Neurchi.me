@@ -19,10 +19,11 @@
 <label><?php echo ossn_print('meta:seitenbeschreibung');?></label>
 <input type="text" name="metaseitenbeschreibung" value="<?php echo $params['settings']->metaseitenbeschreibung;?>"/>
 <label><?php echo ossn_print('meta:autor');?></label>
-<input type="text" name="metaautor" value="<?php echo $params['settings']->metaautor;?>"/><label><?php echo ossn_print('meta:keywords');?></label>
-<input type="text" name="metacopyright" value="<?php echo $params['settings']->metacopyright;?>"/>
-<label><?php echo ossn_print('meta:copyright');?></label>
+<input type="text" name="metaautor" value="<?php echo $params['settings']->metaautor;?>"/><label>
+<?php echo ossn_print('meta:keywords');?></label>
 <input type="text" name="metakeywords" value="<?php echo $params['settings']->metakeywords;?>"/>
+<label><?php echo ossn_print('meta:copyright');?></label>
+<input type="text" name="metacopyright" value="<?php echo $params['settings']->metacopyright;?>"/>
 <label><?php echo ossn_print('meta:robots');?></label>
 <input type="text" name="metarobots" value="<?php echo $params['settings']->metarobots;?>"/>
 <label><?php echo ossn_print('meta:googlesiteverification');?></label>
