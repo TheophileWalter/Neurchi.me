@@ -79,9 +79,7 @@ function search_users_groups_handler($hook, $type, $return, $params) {
     // Groups
     $groups = new OssnGroup;
     $data   = $groups->searchGroups($params['q']);
-    $count  += $groups->searchGroups($params['q'], array(
-            'count' => true
-    ));
+    $count  = max($groups->searchGroups($params['q'], array('count' => true)), $count);
     
     $group['groups'] = $data;
     $search          .= ossn_plugin_view('groups/search/view', $group);
