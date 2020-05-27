@@ -2302,7 +2302,7 @@ footer .ossn-footer-menu a:last-child::after {
 
 
 .mobile-home-button {
-	display: none;
+	display: none!important;
 }
 
 /**************************
@@ -2560,7 +2560,7 @@ footer .ossn-footer-menu a:last-child::after {
 		display: none;
 	}
 	.mobile-home-button {
-		display: inline-block;
+		display: block!important;
 	}
 	.home-left-contents .description {
 		font-size: 16px;
@@ -2636,7 +2636,7 @@ footer .ossn-footer-menu a:last-child::after {
 		display: none;
 	}
 	.mobile-home-button {
-		display: inline-block;
+		display: block!important;
 	}
 }
 
@@ -2685,7 +2685,7 @@ footer .ossn-footer-menu a:last-child::after {
 		display: none;
 	}
 	.mobile-home-button {
-		display: inline-block;
+		display: block!important;
 	}
 }
 
