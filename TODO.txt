@@ -28,3 +28,6 @@
 [X] Supprimer le bonton "Feedback" du site
 [X] Mettre les résultats de groupes dans la recherche par défaut
 [X] Supprimer la limite de selection de 10 postes en attente de validation (sauf pour la page qui les liste)
+[ ] Corriger l'affichage des icones à droite de la topbar sur des affichages de taille moyenne
+[ ] Ajouter un attribut NSFW aux groupes et l'option dans le profil utilisateur pour afficher ou non ce contenu dans le fil d'actualités
+[X] Les posts privés sont visibles via leur url pour un utilisateur non connecté/non membre, à corriger

@@ -248,9 +248,9 @@ function ossn_post_page($pages) {
 								ossn_error_page();
 						}
 						//Posts having friends privacy are visible to public using direct URL #1484
-						if($post->access == OSSN_FRIENDS && !ossn_isLoggedin()){
+						if (!user_can_view_post($post, ossn_loggedin_user())) {
 								ossn_error_page();	
-						}						
+						}
 						$params['post'] = $post;
 						
 						$contents = array(
@@ -576,5 +576,67 @@ function ossn_wallpost_to_item($post) {
 		}
 		return false;
 }
+
+/**
+ * Check if a user is allowed to view a post
+ * 
+ * @param object $post	A post object
+ * @param object $user	An user object
+ */
+function user_can_view_post($post, $user) {
+	// Admin can see everything
+	if (ossn_isAdminLoggedin()) {
+		return true;
+	}
+	// Post pending are never shown
+	if ($post->type == 'group:pending') {
+		return false;
+	}
+	// Post on user wall
+	if ($post->type == 'user') {
+		// Public user post
+		if ($post->access == OSSN_PUBLIC) {
+			return true;
+		}
+		// Friend user post
+		if ($post->access == OSSN_FRIENDS) {
+			// Not connected
+			if ($user === false) {
+				return false;
+			}
+			// Friend (or seeing my own post)
+			if ($user->guid === $post->poster_guid || $user->isFriend($user->guid, $post->poster_guid)) {
+				return true;
+			} else {
+				return false;
+			}
+		}
+	}
+	// Post from group
+	if ($post->type == 'group') {
+		$group = new OssnGroup;
+		$group = $group->getGroup($post->owner_guid);
+		// Group is public
+		if ($group->membership == OSSN_PUBLIC) {
+			return true;
+		}
+		if ($group->membership == OSSN_PRIVATE) {
+			// Not connected
+			if ($user === false) {
+				return false;
+			}
+			// User is member of the group
+			if ($group->isMember($group->guid, $user->guid)) {
+				return true;
+			} else {
+				return false;
+			}
+		}
+	}
+	// By default, we don't show the post
+	return false;
+}
+
+
 //initilize ossn wall
 ossn_register_callback('ossn', 'init', 'ossn_wall');
